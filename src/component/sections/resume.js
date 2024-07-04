@@ -82,7 +82,7 @@ export const Resume = () => {
             <div class="resume-item">
               <h4>SSC</h4>
               <h5>Jun - 2010</h5>
-              <p><em>Sanskar Bharti Vidhyalaya, Suart</em></p>
+              <p>Sanskar Bharti Vidhyalaya, Suart</p>
               <p>87.85%</p>
             </div>
             {/* <!-- Edn Resume Item --> */}
