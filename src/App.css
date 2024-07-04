@@ -194,12 +194,9 @@ h6 {
   color: var(--contrast-color);
   background: var(--accent-color);
 }
-
 @media (min-width: 1200px) {
-
-  .header~main,
-  .header~#footer {
-    margin-left: 300px;
+  .header-main, .header~#footer {
+      margin-left: 300px;
   }
 }
 .leftZero{
@@ -549,7 +546,13 @@ section,
 
 .section-title p {
   margin-bottom: 0;
+  font-size: 20px;
 }
+.about-me-p{
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -589,13 +592,17 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 64px;
-  font-weight: 700;
+  text-align: left;
+  font-size: 70px;
+  font-weight: 900;
+  text-transform: initial;
 }
 
 .hero p {
-  margin: 5px 0 0 0;
-  font-size: 26px;
+  margin: 4px 0 0 10;
+  font-size: 40px;
+  text-align:left ;
+  text-transform: initial;
 }
 
 .hero p span {
@@ -633,27 +640,27 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about .content h2 {
+.content h2 {
   font-weight: 700;
   font-size: 24px;
 }
 
-.about .content ul {
+.content ul {
   list-style: none;
   padding: 0;
 }
 
-.about .content ul li {
+.content ul li {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
 }
 
-.about .content ul strong {
+.content ul strong {
   margin-right: 10px;
 }
 
-.about .content ul i {
+.content ul i {
   font-size: 16px;
   margin-right: 5px;
   color: var(--accent-color);
@@ -1282,7 +1289,7 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-section{
+/* section{
   padding: 12rem 0;
   text-align: center;
   font-size: 5rem;
@@ -1292,7 +1299,7 @@ section{
   align-items: center;
   justify-content: center;
   
-}
+} */
 
 #hero{
   height: calc(100vh-6rem);
@@ -1334,7 +1341,7 @@ section{
   /* -webkit-box-reflect: below 1px linear-gradient(transparent, #3333); */
 }
 
-.typing h2 {
+.typing {
   position: relative;
   color: #fff;
   letter-spacing: 3px;
@@ -1358,7 +1365,7 @@ section{
 }
 
 @media(max-width: 330px) {
-  .typing h2 {
+  .typing {
       font-size: 1rem;
       animation: type 5s steps(10) infinite;
   }
@@ -1375,4 +1382,7 @@ section{
           width: 305px;
       }
   }
+}
+.section-space{
+  margin-left: 300px;
 }

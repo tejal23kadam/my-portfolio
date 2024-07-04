@@ -84,13 +84,13 @@ function NavBar() {
                 </ul> */}
                     <ul  >
                         <li key={0} onClick={() => scrollToSection('hero')}>
-                            <Link to="/" className={activeLink === "hero" ? "active" : ""}><i class="bi bi-house"></i>hero</Link>
+                            <Link to="/" className={activeLink === "hero" ? "active" : ""}><i class="bi bi-house"></i>Home</Link>
                         </li>
                         <li key={1} onClick={() => scrollToSection('about')}>
-                            <Link to="/" className={activeLink === "about" ? "active" : ""}><i class="bi bi-person"></i>about</Link>
+                            <Link to="/" className={activeLink === "about" ? "active" : ""}><i class="bi bi-person"></i>About</Link>
                         </li>
-                        <li key={2} onClick={() => scrollToSection('testimonial')}>
-                            <Link to="/" className={activeLink === "testimonial" ? "active" : ""}><i class="bi bi-file-earmark-text"></i>testimonial</Link>
+                        <li key={2} onClick={() => scrollToSection('resume')}>
+                            <Link to="/" className={activeLink === "resume" ? "active" : ""}><i class="bi bi-file-earmark-text"></i>Resume</Link>
                         </li>
                         <li key={3} onClick={() => scrollToSection('contact')}>
                             <Link to="/" className={activeLink === "contact" ? "active" : ""}><i class="bi bi-images"></i>contact</Link>
