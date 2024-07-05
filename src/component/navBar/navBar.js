@@ -75,24 +75,30 @@ function NavBar() {
                     <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
                 </div>
                 <nav id="navmenu" className="navmenu" >
-                    {/* <ul>
+                     {/* <ul>
                     {sectionIds.map((sectionId, i) => (
                         <li key={i} onClick={() => scrollToSection(sectionId)}>
-                            <Link to="/" className={activeLink === sectionId ? "active" : ""}><i class={"bi bi-0-square"}></i>{sectionId}</Link>
+                            <Link to="/" className={activeLink === sectionId ? "active" : ""}>{sectionId}</Link>
                         </li>
                     ))}
-                </ul> */}
+                </ul>  */}
                     <ul  >
                         <li key={0} onClick={() => scrollToSection('hero')}>
-                            <Link to="/" className={activeLink === "hero" ? "active" : ""}><i class="bi bi-house"></i>Home</Link>
+                            <Link to="/" className={activeLink === "hero" ? "active" : ""}><i class="bi bi-house navicon"></i>Home</Link>
                         </li>
                         <li key={1} onClick={() => scrollToSection('about')}>
-                            <Link to="/" className={activeLink === "about" ? "active" : ""}><i class="bi bi-person"></i>About</Link>
+                            <Link to="/" className={activeLink === "about" ? "active" : ""}><i class="bi bi-person navicon"></i>About</Link>
                         </li>
-                        <li key={2} onClick={() => scrollToSection('resume')}>
-                            <Link to="/" className={activeLink === "resume" ? "active" : ""}><i class="bi bi-file-earmark-text"></i>Resume</Link>
+                        <li key={2} onClick={() => scrollToSection('skills')}>
+                            <Link to="/" className={activeLink === "skills" ? "active" : ""}><i class="bi bi-gear navicon"></i>Skills</Link>
                         </li>
-                        <li key={3} onClick={() => scrollToSection('contact')}>
+                        <li key={3} onClick={() => scrollToSection('resume')}>
+                            <Link to="/" className={activeLink === "resume" ? "active" : ""}><i class="bi bi-file-earmark-text navicon"></i>Resume</Link>
+                        </li>
+                        <li key={4} onClick={() => scrollToSection('portfolio')}>
+                            <Link to="/" className={activeLink === "portfolio" ? "active" : ""}><i class="bi bi-images navicon"></i>Portfolio</Link>
+                        </li>
+                        <li key={5} onClick={() => scrollToSection('contact')}>
                             <Link to="/" className={activeLink === "contact" ? "active" : ""}><i class="bi bi-images"></i>contact</Link>
                         </li>
                     </ul>
