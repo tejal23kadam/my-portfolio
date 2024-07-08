@@ -65,7 +65,7 @@ function NavBar() {
             </i>
             <div className={showHide}>
                 <div className="profile-img">
-                    <img src={require('../sections/img/my-profile-img.jpg')} alt="" className="img-fluid rounded-circle" />
+                    <img src={require('../sections/img/Cropped_Image.png')} alt="" className="img-fluid rounded-circle" />
                 </div>
                 <h1 className="sitename">Tejal Kadam</h1>
                 <div class="social-links text-center">                   
@@ -91,6 +91,9 @@ function NavBar() {
                         </li>
                         <li key={2} onClick={() => scrollToSection('skills')}>
                             <Link to="/" className={activeLink === "skills" ? "active" : ""}><i class="bi bi-gear navicon"></i>Skills</Link>
+                        </li>
+                        <li key={3} onClick={() => scrollToSection('services')}>
+                            <Link to="/" className={activeLink === "services" ? "active" : ""}><i class="bi bi-hdd-stack navicon"></i>Services</Link>
                         </li>
                         <li key={3} onClick={() => scrollToSection('resume')}>
                             <Link to="/" className={activeLink === "resume" ? "active" : ""}><i class="bi bi-file-earmark-text navicon"></i>Resume</Link>

@@ -17,7 +17,7 @@ export const About = () => {
 
                 <div class="row gy-4 justify-content-center">
                     <div class="col-lg-4">
-                        <img src={require('./img/my-profile-img.jpg')} class="img-fluid" alt="" />
+                        <img src={require('./img/about-image.jpg')} class="img-fluid" alt="" />
                     </div>
                     <div class="col-lg-8 content">
                         <h2>Full Stack Developer.</h2>
