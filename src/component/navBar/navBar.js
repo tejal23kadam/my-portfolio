@@ -102,7 +102,7 @@ function NavBar() {
                             <Link to="/" className={activeLink === "portfolio" ? "active" : ""}><i class="bi bi-images navicon"></i>Portfolio</Link>
                         </li>
                         <li key={5} onClick={() => scrollToSection('contact')}>
-                            <Link to="/" className={activeLink === "contact" ? "active" : ""}><i class="bi bi-images"></i>contact</Link>
+                            <Link to="/" className={activeLink === "contact" ? "active" : ""}><i class="bi bi-telephone navicon"></i>contact</Link>
                         </li>
                     </ul>
                 </nav>
