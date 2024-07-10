@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 export const Skills = () => {
   return (
-     // <!-- Skills Section -->
-    <div>
+     // <!-- Skills Section --> 
    
     <section id="skills" className="skills section light-background">
 
@@ -80,7 +79,7 @@ export const Skills = () => {
       </div>
 
     </section>
-    </div>
+  
     // <!-- /Skills Section -->
     
   )
