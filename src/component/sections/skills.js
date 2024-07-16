@@ -9,8 +9,7 @@ export const Skills = () => {
 
       {/* <!-- Section Title --> */}
       <div className="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Skills</h2>        
       </div>
       {/* <!-- End Section Title --> */}
 

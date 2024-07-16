@@ -1,9 +1,9 @@
 import React from 'react'
 
 export const Hero = () => {
+
   return (
     <section id="hero" class="hero section dark-background">
-
       {/*<!-- Header Start --> */}
       {/* <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" className="header-height">
         <div class="container">
@@ -28,17 +28,19 @@ export const Hero = () => {
       {/* <!-- Header End -->*/}
 
 
-      
-   
-      <img src={require('./img/hero-bg (1)-overlay (1).jpg')} alt="" data-aos="fade-in" class=""/>
 
-      <div class="container " data-aos="fade-up" data-aos-delay="100">
-        <h2>Alex Smith</h2>
-        <p>I'm 
+
+      {/* <img src={require('./img/hero-bg (1)-overlay (1).jpg')} alt="" data-aos="fade-in"  className=''/> */}
+
+   
+      <img src={require('./img/1234.jpg')} alt="" data-aos="fade-in"  className='img1'/>
+      <div class="container " >
+        <h2>Tejal Kadam</h2>
+        <p>I'm
           <p class=" typing typed-cursor typed-cursor--blink" aria-hidden="true"><span>Developer</span></p>
         </p>
       </div>
-
+    
 
     </section>
   )

@@ -579,7 +579,7 @@ section,
   align-items: center;
   justify-content: center;
 }
-.hero img {
+.hero .img1 {
   position: absolute;
     inset: 0;
     display: block;
@@ -587,6 +587,11 @@ section,
     height: 100%;
     object-fit: cover;
     z-index: 1;
+}
+.abx{
+ 
+  width: 80%;
+  height: 80%;
 }
 /* .hero img {
   position: absolute;
@@ -1449,4 +1454,8 @@ section,
 }
 .section-space{
   margin-left: 300px;
+}
+
+.abc{
+  background-attachment: fixed;
 }
