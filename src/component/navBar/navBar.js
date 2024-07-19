@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { sectionIds } from './sectionIds';
+import React, { useEffect, useState } from 'react'
+import { navSections }  from './navSections';
 import { Link } from 'react-router-dom';
 
 function NavBar() {
@@ -14,21 +14,24 @@ function NavBar() {
         const element = document.getElementById(sectionId);
         if (element) {
             //adjust margin top value ad needed
-            const marginTop = 0;
+            const marginTop = 0; 
             const scrollToY = element.getBoundingClientRect().top + window.scrollY - marginTop;
             window.scrollTo({ top: scrollToY, behavior: "smooth" });
         }
     }
-    //function to detrmine the active section while scrolling
+   
+    //map an array of object to a single dimantion array for section name
+    const newArraySecName= navSections.map((section) => (section.secName ))   
 
+    //function to detrmine the active section while scrolling 
     const determineActiveSection = () => {
-        for (let i = sectionIds.length - 1; i >= 0; i--) {
-            const section = document.getElementById(sectionIds[i]);
+        for (let i = newArraySecName.length - 1; i >= 0; i--) {
+            const section = document.getElementById(newArraySecName[i]);
             if (section) {
                 const rect = section.getBoundingClientRect();
                 if (rect.top <= 120 && rect.bottom >= 120) {
                     //set active link
-                    setActiveLink(sectionIds[i]);
+                    setActiveLink(newArraySecName[i]);
                     break;
                 }
             }
@@ -51,6 +54,8 @@ function NavBar() {
         }
     }, []);
 
+    // code for responsive design that shows and hides left side navbar 
+    
     const [isOpen, setIsOpen] = useState(false);
     const [showHide, setShowHide] = useState("header");
     const toggle = () => {
@@ -68,42 +73,19 @@ function NavBar() {
                     <img src={require('../sections/img/Cropped_Image.png')} alt="" className="img-fluid rounded-circle" />
                 </div>
                 <h1 className="sitename">Tejal Kadam</h1>
-                <div class="social-links text-center">                   
-                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <div class="social-links text-center">
+                    <Link to="/"  className="facebook"><i class="bi bi-facebook"></i></Link>        
+                    <Link to="/"  className="instagram"><i class="bi bi-instagram"></i></Link>            
+                    <Link to="/"  className="google-plus"><i class="bi bi-skype"></i></Link>  
+                    <Link to="/"  className="linkedin"><i class="bi bi-linkedin"></i></Link>                      
                 </div>
-                <nav id="navmenu" className="navmenu" >
-                     {/* <ul>
-                    {sectionIds.map((sectionId, i) => (
-                        <li key={i} onClick={() => scrollToSection(sectionId)}>
-                            <Link to="/" className={activeLink === sectionId ? "active" : ""}>{sectionId}</Link>
-                        </li>
-                    ))}
-                </ul>  */}
-                    <ul  >
-                        <li key={0} onClick={() => scrollToSection('hero')}>
-                            <Link to="/" className={activeLink === "hero" ? "active" : ""}><i class="bi bi-house navicon"></i>Home</Link>
-                        </li>
-                        <li key={1} onClick={() => scrollToSection('about')}>
-                            <Link to="/" className={activeLink === "about" ? "active" : ""}><i class="bi bi-person navicon"></i>About</Link>
-                        </li>
-                        <li key={2} onClick={() => scrollToSection('skills')}>
-                            <Link to="/" className={activeLink === "skills" ? "active" : ""}><i class="bi bi-gear navicon"></i>Skills</Link>
-                        </li>
-                        <li key={3} onClick={() => scrollToSection('services')}>
-                            <Link to="/" className={activeLink === "services" ? "active" : ""}><i class="bi bi-hdd-stack navicon"></i>Services</Link>
-                        </li>
-                        <li key={3} onClick={() => scrollToSection('resume')}>
-                            <Link to="/" className={activeLink === "resume" ? "active" : ""}><i class="bi bi-file-earmark-text navicon"></i>Resume</Link>
-                        </li>
-                        <li key={4} onClick={() => scrollToSection('portfolio')}>
-                            <Link to="/" className={activeLink === "portfolio" ? "active" : ""}><i class="bi bi-images navicon"></i>Portfolio</Link>
-                        </li>
-                        <li key={5} onClick={() => scrollToSection('contact')}>
-                            <Link to="/" className={activeLink === "contact" ? "active" : ""}><i class="bi bi-telephone navicon"></i>contact</Link>
-                        </li>
+                <nav id="navmenu" className="navmenu">
+                    <ul>
+                        {navSections.map((section, i) => (
+                            <li key={i} onClick={() => scrollToSection(section.secName)}>
+                                <Link to="/" className={activeLink === section.secName ? "active" : ""}><i class={section.icon}></i>{section.secName}</Link>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
             </div>

@@ -1,1 +1,0 @@
-export const sectionIds = ["hero","about","skills","services","resume","portfolio","contact"]; 
