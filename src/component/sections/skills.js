@@ -1,15 +1,14 @@
 import React from 'react'
-import PropTypes from 'prop-types';
 
 export const Skills = () => {
   return (
-     // <!-- Skills Section --> 
-   
+    // <!-- Skills Section --> 
+
     <section id="skills" className="skills section light-background">
 
       {/* <!-- Section Title --> */}
       <div className="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>        
+        <h2>Skills</h2>
       </div>
       {/* <!-- End Section Title --> */}
 
@@ -44,7 +43,6 @@ export const Skills = () => {
             {/* <!-- End Skills Item --> */}
 
           </div>
-
           <div className="col-lg-6">
 
             <div className="progress">
@@ -73,13 +71,14 @@ export const Skills = () => {
 
           </div>
 
+
         </div>
 
       </div>
 
     </section>
-  
+
     // <!-- /Skills Section -->
-    
+
   )
 }
