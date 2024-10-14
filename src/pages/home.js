@@ -16,8 +16,7 @@ export const Home = () => {
       <Services/>
       <Resume />  
       <Portfolio/>   
-      <Contact />
-     
+      <Contact />     
     </div>
   </>;
 };

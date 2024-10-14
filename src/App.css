@@ -301,9 +301,9 @@ h6 {
   font-size: 20px;
   margin-right: 10px;
 }
-.navmenu a i{
-  font-size: 20px;
-  margin-right: 10px;
+.navmenu i{
+  font-size: 40px;
+  
 }
 
 .navmenu a .toggle-dropdown,
